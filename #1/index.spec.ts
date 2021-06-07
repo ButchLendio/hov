@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import R from 'ramda';
 import AsyncCache from '.';
 
-describe('AsyncCache', () => {
+describe.skip('AsyncCache', () => {
   before(function () {
     this.spy = sinon.spy(async (first: any, second: any) => {
       await delay(100 + Math.random() * 100);

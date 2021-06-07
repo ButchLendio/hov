@@ -24,7 +24,7 @@ describe('availability', () => {
   }
 });
 
-describe('outages', () => {
+describe.only('outages', () => {
   const cases: { input: Parameters<typeof outages>, output: ReturnType<typeof outages> }[] = [
     {
       input: [new Date('2020-03-01T00:00:00.000Z'), new Date('2020-03-02T00:00:00.000Z')],
