@@ -6,6 +6,9 @@
  * @param data 
  */
 export default function logest(ys: number[]): number {
+
+  const initialParameters = (ys)
+  console.log(initialParameters);
   // do something
   return 0;
 }
