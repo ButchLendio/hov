@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import R from 'ramda';
 import AsyncCache from '.';
 
-describe.only('AsyncCache', () => {
+describe('AsyncCache', () => {
   before(function () {
     this.spy = sinon.spy(async (first: any, second: any) => {
       await delay(100 + Math.random() * 100);
@@ -28,7 +28,7 @@ describe.only('AsyncCache', () => {
     sinon.reset();
   });
 
-  it.only('should call the handler once, when #exec is called multiple times in series', async function () {
+  it('should call the handler once, when #exec is called multiple times in series', async function () {
     const cache = new AsyncCache<[string], { first: string }>(this.spy);
 
     await cache.exec('hello').then(result => expect(result).to.deep.equal({ first: 'hello' }));

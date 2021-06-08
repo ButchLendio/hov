@@ -6,9 +6,27 @@
  * @param data 
  */
 export default function logest(ys: number[]): number {
-
-  const initialParameters = (ys)
-  console.log(initialParameters);
   // do something
-  return 0;
+
+  const xs = [1,2,3,4,5]
+
+  function solve(x,b,m){
+    const y = b * m**x
+    return y
+  }
+
+  const exec = solve(xs,ys,xs)
+  console.log(exec);
+
+  const modelPredictions = solve(xs, exec,ys) 
+  
+  // console.log(modelPredictions)
+
+  const absError = modelPredictions-ys
+
+// console.log(absError);
+
+
+
+  return exec;
 }
